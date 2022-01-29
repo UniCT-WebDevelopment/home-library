@@ -1,0 +1,4 @@
+#ignore node_modules and dist folder
+node_modules
+dist
+build

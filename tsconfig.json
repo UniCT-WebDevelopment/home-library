@@ -1,0 +1,16 @@
+{
+  "ts-node": {
+    "files": true
+  },
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs", // standard NodeJS
+    "rootDir": "./",
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "strict": true,
+    // By default typescript find type definition on ./node_modules folder
+    // in this way TS, will retrieve types from "types" folder and node_modules
+    "typeRoots": ["@types", "./node_modules/@types"]
+  }
+}

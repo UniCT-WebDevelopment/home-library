@@ -1,0 +1,415 @@
+{
+	"info": {
+		"_postman_id": "39badb18-1c79-4d3c-8e0b-0d22823d510a",
+		"name": "Home-Library",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign up",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Mario\",\r\n    \"email\":\"mario2@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"signup"
+					]
+				},
+				"description": "API which allow you to signup into Home Library app"
+			},
+			"response": []
+		},
+		{
+			"name": "Sign In",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"mario2@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Library",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYzk4OGI1MmNjNzE1N2FmYWQzMTFkNiIsIm5hbWUiOiJNYXJpbyIsImVtYWlsIjoibWFyaW8yQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEdpSkRvZTdKeFdVUVF3TkRyak1BYWVGWkJOYzRsUmc4Ui5TLmRZL0czcWJsV29jWEZuUnhTIiwibGlicmFyaWVzIjpbeyJuYW1lIjoibGEgc2Vjb25kYSBsaWJyZXJpYSIsImNyZWF0aW9uRGF0ZSI6IjI2LzEyLzIwMjEiLCJzaGFyZWFibGUiOmZhbHNlLCJzaGVsdmVzIjpbeyJuYW1lIjoiTWVuc29sYSAzIiwiYm9va3MiOlt7ImlzYm4iOiI5Nzg4ODMxMDAzMzkxIiwidGl0bGUiOiJIYXJyeSBQb3R0ZXIiLCJhdXRob3JzIjoiSi5LIFJvd2xpbmciLCJpc1JlYWQiOnRydWUsInN0YXJ0ZWRSZWFkIjoiMjEvMTIvMjAyMSIsImVuZFJlYWQiOiIxMC8xMi8yMDIyIiwic21hbGxUaHVtYm5haWwiOiIiLCJfaWQiOiI2MWM5ZGRlZTg4OTcwMzlhZjJjZjVlOGUifSx7ImlzYm4iOiI5Nzg4ODMxMDAzMzkxIiwidGl0bGUiOiJIYXJyeSBQb3R0ZXIiLCJhdXRob3JzIjoiSi5LIFJvd2xpbmciLCJpc1JlYWQiOnRydWUsInN0YXJ0ZWRSZWFkIjoiMjEvMTIvMjAyMSIsImVuZFJlYWQiOiIxMC8xMi8yMDIyIiwic21hbGxUaHVtYm5haWwiOiIiLCJfaWQiOiI2MWM5ZGUwMzg4OTcwMzlhZjJjZjVlOTQifV0sIl9pZCI6IjYxYzlhNDkzNzllNGFlODFkNTQ5ZDIxZiJ9XSwiX2lkIjoiNjFjOWE0OGM3OWU0YWU4MWQ1NDlkMjFiIn1dLCJfX3YiOjMzfSwiaWF0IjoxNjQxMTIwNjI4LCJleHAiOjE2NDExMjI0Mjh9.v026CSExqsdMUZkqHHEvKUC7JZ8sgahWCGduWfErtc0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/library/get",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"library",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Library",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYzk4OGI1MmNjNzE1N2FmYWQzMTFkNiIsIm5hbWUiOiJNYXJpbyIsImVtYWlsIjoibWFyaW8yQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEdpSkRvZTdKeFdVUVF3TkRyak1BYWVGWkJOYzRsUmc4Ui5TLmRZL0czcWJsV29jWEZuUnhTIiwibGlicmFyaWVzIjpbeyJuYW1lIjoibGEgc2Vjb25kYSBsaWJyZXJpYSIsImNyZWF0aW9uRGF0ZSI6IjI2LzEyLzIwMjEiLCJzaGFyZWFibGUiOmZhbHNlLCJzaGVsdmVzIjpbeyJuYW1lIjoibWVuc29sYSAxIiwiYm9va3MiOltdLCJfaWQiOiI2MWM5OWM2MDA5MWY1YmIyMDVkZjJiYTMifSx7Im5hbWUiOiJNZW5zb2xhIDEiLCJib29rcyI6W10sIl9pZCI6IjYxYzk5ZTYzNzRjZmY3ODg4MWNhOTJjYyJ9LHsibmFtZSI6Ik1lbnNvbGEgMiIsImJvb2tzIjpbXSwiX2lkIjoiNjFjOTllNmE3NGNmZjc4ODgxY2E5MmQyIn1dLCJfaWQiOiI2MWM5OWM0MTA5MWY1YmIyMDVkZjJiOTkifV0sIl9fdiI6MTR9LCJpYXQiOjE2NDA2MDQyNTcsImV4cCI6MTY0MDYwNjA1N30.bvREUb6dseDenf7LZAMgNE8mGeCDxRwkglDhgGTizWc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"la seconda libreria\",\r\n    \"creationDate\": \"26/12/2021\",\r\n    \"shareable\": false,\r\n    \"shelves\": []\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/library/add",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"library",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Library",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYzk4OGI1MmNjNzE1N2FmYWQzMTFkNiIsIm5hbWUiOiJNYXJpbyIsImVtYWlsIjoibWFyaW8yQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEdpSkRvZTdKeFdVUVF3TkRyak1BYWVGWkJOYzRsUmc4Ui5TLmRZL0czcWJsV29jWEZuUnhTIiwibGlicmFyaWVzIjpbeyJuYW1lIjoibGEgc2Vjb25kYSBsaWJyZXJpYSIsImNyZWF0aW9uRGF0ZSI6IjI2LzEyLzIwMjEiLCJzaGFyZWFibGUiOmZhbHNlLCJzaGVsdmVzIjpbeyJib29rcyI6W10sIl9pZCI6IjYxYzk5OTM4YWJiNmEwMWFjN2YwMzE4YSJ9LHsiYm9va3MiOltdLCJfaWQiOiI2MWM5OTkzOGFiYjZhMDFhYzdmMDMxOGIifSx7ImJvb2tzIjpbXSwiX2lkIjoiNjFjOTk5MzhhYmI2YTAxYWM3ZjAzMThjIn1dLCJfaWQiOiI2MWM5OTA5YmE0N2IzM2I3YTBhMWNiMjkifV0sIl9fdiI6OX0sImlhdCI6MTY0MDYwMTkxMywiZXhwIjoxNjQwNjAzNzEzfQ.Nr26YXoQb2bZpg7pZOzhUqaRiX6x7ZOh1FZmeGlMR20",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/library/delete/61c9909ba47b33b7a0a1cb29",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"library",
+						"delete",
+						"61c9909ba47b33b7a0a1cb29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Library",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYzk4OGI1MmNjNzE1N2FmYWQzMTFkNiIsIm5hbWUiOiJNYXJpbyIsImVtYWlsIjoibWFyaW8yQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEdpSkRvZTdKeFdVUVF3TkRyak1BYWVGWkJOYzRsUmc4Ui5TLmRZL0czcWJsV29jWEZuUnhTIiwibGlicmFyaWVzIjpbXSwiX192IjowfSwiaWF0IjoxNjQwNTk3NjkxLCJleHAiOjE2NDA1OTk0OTF9.E3b6RNQPHhh544Vc6aFi_ZuNMU8mcbjQGonBU-_W0no",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"proviamo la mdofica\",\r\n    \"creationDate\": \"26/12/2021\",\r\n    \"shareable\": false,\r\n    \"shelves\": [1, 2, 3],\r\n     \"id\": \"61c98e0c3733bdbe68604ce5\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/library/update",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"library",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Shelf (on a specifc library)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYzk4OGI1MmNjNzE1N2FmYWQzMTFkNiIsIm5hbWUiOiJNYXJpbyIsImVtYWlsIjoibWFyaW8yQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEdpSkRvZTdKeFdVUVF3TkRyak1BYWVGWkJOYzRsUmc4Ui5TLmRZL0czcWJsV29jWEZuUnhTIiwibGlicmFyaWVzIjpbeyJuYW1lIjoiY3VjaW5hZGZkZiIsImNyZWF0aW9uRGF0ZSI6IjAyLzAxLzIwMjIiLCJzaGFyZWFibGUiOnRydWUsInNoZWx2ZXMiOltdLCJfaWQiOiI2MWQxODU2NzFhYTlmMDYzY2IyZWNkY2EifSx7Im5hbWUiOiJzYWxvdHRvIiwiY3JlYXRpb25EYXRlIjoiMDIvMDEvMjAyMiIsInNoYXJlYWJsZSI6dHJ1ZSwic2hlbHZlcyI6W10sIl9pZCI6IjYxZDE4NTk3ZTIzZDgwOWI3MDc2MTk4MyJ9LHsibmFtZSI6Im1hdHRpbm8yIiwiY3JlYXRpb25EYXRlIjoiMDIvMDEvMjAyMiIsInNoYXJlYWJsZSI6dHJ1ZSwic2hlbHZlcyI6W10sIl9pZCI6IjYxZDFiYTU0N2UwOWZiYmM4ZGMzNDFiNSJ9XSwiX192Ijo0N30sImlhdCI6MTY0MTIwNDUyOSwiZXhwIjoxNjQxMjA2MzI5fQ.W96mMaO9lqENhE8_KYZLoX0bSiCiI6QcyO1C4ft7OKA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Mensola 32\",\r\n    \"books\":[]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/library/61d185671aa9f063cb2ecdca/shelf",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"library",
+						"61d185671aa9f063cb2ecdca",
+						"shelf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Shelf (from specific library)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYzk4OGI1MmNjNzE1N2FmYWQzMTFkNiIsIm5hbWUiOiJNYXJpbyIsImVtYWlsIjoibWFyaW8yQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEdpSkRvZTdKeFdVUVF3TkRyak1BYWVGWkJOYzRsUmc4Ui5TLmRZL0czcWJsV29jWEZuUnhTIiwibGlicmFyaWVzIjpbeyJuYW1lIjoibGEgc2Vjb25kYSBsaWJyZXJpYSIsImNyZWF0aW9uRGF0ZSI6IjI2LzEyLzIwMjEiLCJzaGFyZWFibGUiOmZhbHNlLCJzaGVsdmVzIjpbeyJuYW1lIjoibWVuc29sYSAxIiwiYm9va3MiOltdLCJfaWQiOiI2MWM5OWM2MDA5MWY1YmIyMDVkZjJiYTMifSx7Im5hbWUiOiJNZW5zb2xhIDEiLCJib29rcyI6W10sIl9pZCI6IjYxYzk5ZTYzNzRjZmY3ODg4MWNhOTJjYyJ9LHsibmFtZSI6Ik1lbnNvbGEgMiIsImJvb2tzIjpbXSwiX2lkIjoiNjFjOTllNmE3NGNmZjc4ODgxY2E5MmQyIn1dLCJfaWQiOiI2MWM5OWM0MTA5MWY1YmIyMDVkZjJiOTkifV0sIl9fdiI6MTR9LCJpYXQiOjE2NDA2MDQyNTcsImV4cCI6MTY0MDYwNjA1N30.bvREUb6dseDenf7LZAMgNE8mGeCDxRwkglDhgGTizWc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/library/61c9a48c79e4ae81d549d21b/shelf/61c9a49679e4ae81d549d224",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"library",
+						"61c9a48c79e4ae81d549d21b",
+						"shelf",
+						"61c9a49679e4ae81d549d224"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add book on library",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYzk4OGI1MmNjNzE1N2FmYWQzMTFkNiIsIm5hbWUiOiJNYXJpbyIsImVtYWlsIjoibWFyaW8yQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEdpSkRvZTdKeFdVUVF3TkRyak1BYWVGWkJOYzRsUmc4Ui5TLmRZL0czcWJsV29jWEZuUnhTIiwibGlicmFyaWVzIjpbeyJuYW1lIjoiY3VjaW5hZGZkZiIsImNyZWF0aW9uRGF0ZSI6IjAyLzAxLzIwMjIiLCJzaGFyZWFibGUiOnRydWUsInNoZWx2ZXMiOltdLCJfaWQiOiI2MWQxODU2NzFhYTlmMDYzY2IyZWNkY2EifSx7Im5hbWUiOiJzYWxvdHRvIiwiY3JlYXRpb25EYXRlIjoiMDIvMDEvMjAyMiIsInNoYXJlYWJsZSI6dHJ1ZSwic2hlbHZlcyI6W10sIl9pZCI6IjYxZDE4NTk3ZTIzZDgwOWI3MDc2MTk4MyJ9LHsibmFtZSI6Im1hdHRpbm8yIiwiY3JlYXRpb25EYXRlIjoiMDIvMDEvMjAyMiIsInNoYXJlYWJsZSI6dHJ1ZSwic2hlbHZlcyI6W10sIl9pZCI6IjYxZDFiYTU0N2UwOWZiYmM4ZGMzNDFiNSJ9XSwiX192Ijo0N30sImlhdCI6MTY0MTIwNDUyOSwiZXhwIjoxNjQxMjA2MzI5fQ.W96mMaO9lqENhE8_KYZLoX0bSiCiI6QcyO1C4ft7OKA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"isbn\": \"9788831003391\",\r\n    \"title\": \"Il codice di rebecca\",\r\n     \"authors\" :\"J.K Rowling\",\r\n     \"publishedDate\":\"21/12/2021\",\r\n     \"isRead\": true,\r\n     \"startedRead\":\"21/12/2021\",\r\n     \"endRead\": \"10/12/2022\",\r\n     \"description\":\"Lorem ipsum...\",\r\n     \"smallThumbnail\":\"\",\r\n     \"thumbNail\":\"\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/book/61d185671aa9f063cb2ecdca/61d2cf121f65e4f9ec791307",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"book",
+						"61d185671aa9f063cb2ecdca",
+						"61d2cf121f65e4f9ec791307"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Shelves based on Library ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/library/shelves/61d18597e23d809b70761983",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"library",
+						"shelves",
+						"61d18597e23d809b70761983"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All books for specific User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYzk4OGI1MmNjNzE1N2FmYWQzMTFkNiIsIm5hbWUiOiJNYXJpbyIsImVtYWlsIjoibWFyaW8yQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEdpSkRvZTdKeFdVUVF3TkRyak1BYWVGWkJOYzRsUmc4Ui5TLmRZL0czcWJsV29jWEZuUnhTIiwibGlicmFyaWVzIjpbeyJuYW1lIjoiY3VjaW5hZGZkZiIsImNyZWF0aW9uRGF0ZSI6IjAyLzAxLzIwMjIiLCJzaGFyZWFibGUiOnRydWUsInNoZWx2ZXMiOlt7Im5hbWUiOiJNZW5zb2xhIDMyIiwiYm9va3MiOlt7ImlzYm4iOiI5Nzg4ODMxMDAzMzkxIiwidGl0bGUiOiJJbCBjb2RpY2UgZGkgcmViZWNjYSIsImF1dGhvcnMiOiJKLksgUm93bGluZyIsImlzUmVhZCI6dHJ1ZSwic3RhcnRlZFJlYWQiOiIyMS8xMi8yMDIxIiwiZW5kUmVhZCI6IjEwLzEyLzIwMjIiLCJzbWFsbFRodW1ibmFpbCI6IiIsIl9pZCI6IjYxZDJjZjQ1MWY2NWU0ZjllYzc5MTMxMyJ9LHsiaXNibiI6Ijg4NjkxMzYzMDIiLCJ0aXRsZSI6IkxvY2tlICYgS2V5IiwiYXV0aG9ycyI6IkpvZSBIaWxsLEdhYnJpZWwgUm9kcmlndWV6IiwiaXNSZWFkIjp0cnVlLCJzbWFsbFRodW1ibmFpbCI6Imh0dHA6Ly9ib29rcy5nb29nbGUuY29tL2Jvb2tzL2NvbnRlbnQ_aWQ9VUVsU3pRRUFDQUFKJnByaW50c2VjPWZyb250Y292ZXImaW1nPTEmem9vbT01JnNvdXJjZT1nYnNfYXBpIiwiX2lkIjoiNjFkNDJhMTIzY2NkNTE0YmIzZTk0ZmY0In1dLCJfaWQiOiI2MWQyY2YxMjFmNjVlNGY5ZWM3OTEzMDcifSx7Im5hbWUiOiJuZXcgU2hlbGYiLCJfaWQiOiI2MWQyZmFjOTQ5MmNkNjNhOGRlZGQ1MTAiLCJib29rcyI6W119LHsibmFtZSI6Im1lbnNvbGEgY3VjaW5hIiwiX2lkIjoiNjFkMmZiMWY0OTJjZDYzYThkZWRkNTQ1IiwiYm9va3MiOltdfV0sIl9pZCI6IjYxZDE4NTY3MWFhOWYwNjNjYjJlY2RjYSJ9LHsibmFtZSI6InNhbG90dG8iLCJjcmVhdGlvbkRhdGUiOiIwMi8wMS8yMDIyIiwic2hhcmVhYmxlIjp0cnVlLCJzaGVsdmVzIjpbeyJuYW1lIjoiTWVuc29sYSA0IiwiYm9va3MiOlt7ImlzYm4iOiI5Nzg4ODMxMDAzMzkxIiwidGl0bGUiOiJIYXJyeSBQb3R0ZXIiLCJhdXRob3JzIjoiSi5LIFJvd2xpbmciLCJpc1JlYWQiOnRydWUsInN0YXJ0ZWRSZWFkIjoiMjEvMTIvMjAyMSIsImVuZFJlYWQiOiIxMC8xMi8yMDIyIiwic21hbGxUaHVtYm5haWwiOiIiLCJfaWQiOiI2MWQyY2U4ZTFmNjVlNGY5ZWM3OTEyZTEifSx7ImlzYm4iOiI5Nzg4ODMxMDAzMzkxIiwidGl0bGUiOiJUcm9ubyBkaSBzcGFkZSIsImF1dGhvcnMiOiJKLksgUm93bGluZyIsImlzUmVhZCI6dHJ1ZSwic3RhcnRlZFJlYWQiOiIyMS8xMi8yMDIxIiwiZW5kUmVhZCI6IjEwLzEyLzIwMjIiLCJzbWFsbFRodW1ibmFpbCI6IiIsIl9pZCI6IjYxZDJjZTlmMWY2NWU0ZjllYzc5MTJlOSJ9XSwiX2lkIjoiNjFkMmNiNGJiZjA1Mzc0MDgyOTAzZDE2In0seyJuYW1lIjoiTWVuc29sYSBUcm9ub2Rpc3BhZGVkZnd3IiwiYm9va3MiOlt7ImlzYm4iOiI5Nzg4ODMxMDAzMzkxIiwidGl0bGUiOiJHbGVlbiBjb29wZXIiLCJhdXRob3JzIjoiSi5LIFJvd2xpbmciLCJpc1JlYWQiOnRydWUsInN0YXJ0ZWRSZWFkIjoiMjEvMTIvMjAyMSIsImVuZFJlYWQiOiIxMC8xMi8yMDIyIiwic21hbGxUaHVtYm5haWwiOiIiLCJfaWQiOiI2MWQyY2VlZDFmNjVlNGY5ZWM3OTEyZmMifV0sIl9pZCI6IjYxZDJjZWNjMWY2NWU0ZjllYzc5MTJmMiJ9LHsibmFtZSI6Im1lbnNvbGEgaHAiLCJfaWQiOiI2MWQzMDI0NDRjZWE5ZDc4YTk2MThkZWIiLCJib29rcyI6W119LHsibmFtZSI6Im1lbnNvbGEgaHAxIiwiX2lkIjoiNjFkMzYxMWM0Y2NlYmY5NDU3M2Q4MTJkIiwiYm9va3MiOltdfSx7Im5hbWUiOiJtZW5zb2xhIGhwMTIiLCJfaWQiOiI2MWQzNjE0MjRjY2ViZjk0NTczZDgxNGYiLCJib29rcyI6W119XSwiX2lkIjoiNjFkMTg1OTdlMjNkODA5YjcwNzYxOTgzIn0seyJuYW1lIjoibWF0dGlubzIiLCJjcmVhdGlvbkRhdGUiOiIwMi8wMS8yMDIyIiwic2hhcmVhYmxlIjp0cnVlLCJzaGVsdmVzIjpbXSwiX2lkIjoiNjFkMWJhNTQ3ZTA5ZmJiYzhkYzM0MWI1In1dLCJfX3YiOjY2fSwiaWF0IjoxNjQxMjk0NDMxLCJleHAiOjE2NDEyOTYyMzF9.vVIVIEkR1QJOcVBNxaS3jc5A_xVxxns0r980le0V4dU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/book",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book from Shelf/Library",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYxYzk4OGI1MmNjNzE1N2FmYWQzMTFkNiIsIm5hbWUiOiJNYXJpbyIsImVtYWlsIjoibWFyaW8yQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJEdpSkRvZTdKeFdVUVF3TkRyak1BYWVGWkJOYzRsUmc4Ui5TLmRZL0czcWJsV29jWEZuUnhTIiwibGlicmFyaWVzIjpbeyJuYW1lIjoiY3VjaW5hZGZkZiIsImNyZWF0aW9uRGF0ZSI6IjAyLzAxLzIwMjIiLCJzaGFyZWFibGUiOnRydWUsInNoZWx2ZXMiOlt7Im5hbWUiOiJNZW5zb2xhIDMyIiwiYm9va3MiOlt7ImlzYm4iOiI5Nzg4ODMxMDAzMzkxIiwidGl0bGUiOiJJbCBjb2RpY2UgZGkgcmViZWNjYSIsImF1dGhvcnMiOiJKLksgUm93bGluZyIsImlzUmVhZCI6dHJ1ZSwic3RhcnRlZFJlYWQiOiIyMS8xMi8yMDIxIiwiZW5kUmVhZCI6IjEwLzEyLzIwMjIiLCJzbWFsbFRodW1ibmFpbCI6IiIsIl9pZCI6IjYxZDJjZjQ1MWY2NWU0ZjllYzc5MTMxMyJ9LHsiaXNibiI6Ijg4NjkxMzYzMDIiLCJ0aXRsZSI6IkxvY2tlICYgS2V5IiwiYXV0aG9ycyI6IkpvZSBIaWxsLEdhYnJpZWwgUm9kcmlndWV6IiwiaXNSZWFkIjp0cnVlLCJzbWFsbFRodW1ibmFpbCI6Imh0dHA6Ly9ib29rcy5nb29nbGUuY29tL2Jvb2tzL2NvbnRlbnQ_aWQ9VUVsU3pRRUFDQUFKJnByaW50c2VjPWZyb250Y292ZXImaW1nPTEmem9vbT01JnNvdXJjZT1nYnNfYXBpIiwiX2lkIjoiNjFkNDJhMTIzY2NkNTE0YmIzZTk0ZmY0In0seyJpc2JuIjoiODg2OTEzNjMwMiIsInRpdGxlIjoiTG9ja2UgJiBLZXkiLCJhdXRob3JzIjoiSm9lIEhpbGwsR2FicmllbCBSb2RyaWd1ZXoiLCJpc1JlYWQiOnRydWUsInNtYWxsVGh1bWJuYWlsIjoiaHR0cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3MvY29udGVudD9pZD1VRWxTelFFQUNBQUomcHJpbnRzZWM9ZnJvbnRjb3ZlciZpbWc9MSZ6b29tPTUmc291cmNlPWdic19hcGkiLCJfaWQiOiI2MWQ0MmFlMDNjY2Q1MTRiYjNlOTUwNjEifV0sIl9pZCI6IjYxZDJjZjEyMWY2NWU0ZjllYzc5MTMwNyJ9LHsibmFtZSI6Im5ldyBTaGVsZiIsIl9pZCI6IjYxZDJmYWM5NDkyY2Q2M2E4ZGVkZDUxMCIsImJvb2tzIjpbXX0seyJuYW1lIjoibWVuc29sYSBjdWNpbmEiLCJfaWQiOiI2MWQyZmIxZjQ5MmNkNjNhOGRlZGQ1NDUiLCJib29rcyI6W119XSwiX2lkIjoiNjFkMTg1NjcxYWE5ZjA2M2NiMmVjZGNhIn0seyJuYW1lIjoic2Fsb3R0byIsImNyZWF0aW9uRGF0ZSI6IjAyLzAxLzIwMjIiLCJzaGFyZWFibGUiOnRydWUsInNoZWx2ZXMiOlt7Im5hbWUiOiJNZW5zb2xhIDQiLCJib29rcyI6W3siaXNibiI6Ijk3ODg4MzEwMDMzOTEiLCJ0aXRsZSI6IkhhcnJ5IFBvdHRlciIsImF1dGhvcnMiOiJKLksgUm93bGluZyIsImlzUmVhZCI6dHJ1ZSwic3RhcnRlZFJlYWQiOiIyMS8xMi8yMDIxIiwiZW5kUmVhZCI6IjEwLzEyLzIwMjIiLCJzbWFsbFRodW1ibmFpbCI6IiIsIl9pZCI6IjYxZDJjZThlMWY2NWU0ZjllYzc5MTJlMSJ9LHsiaXNibiI6Ijk3ODg4MzEwMDMzOTEiLCJ0aXRsZSI6IlRyb25vIGRpIHNwYWRlIiwiYXV0aG9ycyI6IkouSyBSb3dsaW5nIiwiaXNSZWFkIjp0cnVlLCJzdGFydGVkUmVhZCI6IjIxLzEyLzIwMjEiLCJlbmRSZWFkIjoiMTAvMTIvMjAyMiIsInNtYWxsVGh1bWJuYWlsIjoiIiwiX2lkIjoiNjFkMmNlOWYxZjY1ZTRmOWVjNzkxMmU5In0seyJpc2JuIjoiODg1MDI1NDY1MiIsInRpdGxlIjoiSSBjYXNpIGRpIEFsZXggQ3Jvc3M6IFJpY29yZGEgTWFnZ2llIFJvc2UtSWwgY29sbGV6aW9uaXN0YS1KYWNrICYgSmlsbCIsImF1dGhvcnMiOiJKYW1lcyBQYXR0ZXJzb24iLCJpc1JlYWQiOnRydWUsInNtYWxsVGh1bWJuYWlsIjoiaHR0cDovL2Jvb2tzLmdvb2dsZS5jb20vYm9va3MvY29udGVudD9pZD1pZWg2eGdFQUNBQUomcHJpbnRzZWM9ZnJvbnRjb3ZlciZpbWc9MSZ6b29tPTUmc291cmNlPWdic19hcGkiLCJfaWQiOiI2MWQ0MzQ1ZTNjY2Q1MTRiYjNlOTUzZDEifSx7ImlzYm4iOiI4ODE3MDkyNTA5IiwidGl0bGUiOiJDZW50byIsImF1dGhvcnMiOiJLYXNzIE1vcmdhbiIsImlzUmVhZCI6dHJ1ZSwic21hbGxUaHVtYm5haWwiOiJodHRwOi8vYm9va3MuZ29vZ2xlLmNvbS9ib29rcy9jb250ZW50P2lkPUtfNHRNUUFBQ0FBSiZwcmludHNlYz1mcm9udGNvdmVyJmltZz0xJnpvb209NSZzb3VyY2U9Z2JzX2FwaSIsIl9pZCI6IjYxZDQzZGYxM2NjZDUxNGJiM2U5NTYwNCJ9XSwiX2lkIjoiNjFkMmNiNGJiZjA1Mzc0MDgyOTAzZDE2In0seyJuYW1lIjoiTWVuc29sYSBUcm9ub2Rpc3BhZGVkZnd3IiwiYm9va3MiOlt7ImlzYm4iOiI5Nzg4ODMxMDAzMzkxIiwidGl0bGUiOiJHbGVlbiBjb29wZXIiLCJhdXRob3JzIjoiSi5LIFJvd2xpbmciLCJpc1JlYWQiOnRydWUsInN0YXJ0ZWRSZWFkIjoiMjEvMTIvMjAyMSIsImVuZFJlYWQiOiIxMC8xMi8yMDIyIiwic21hbGxUaHVtYm5haWwiOiIiLCJfaWQiOiI2MWQyY2VlZDFmNjVlNGY5ZWM3OTEyZmMifV0sIl9pZCI6IjYxZDJjZWNjMWY2NWU0ZjllYzc5MTJmMiJ9LHsibmFtZSI6Im1lbnNvbGEgaHAiLCJfaWQiOiI2MWQzMDI0NDRjZWE5ZDc4YTk2MThkZWIiLCJib29rcyI6W119LHsibmFtZSI6Im1lbnNvbGEgaHAxIiwiX2lkIjoiNjFkMzYxMWM0Y2NlYmY5NDU3M2Q4MTJkIiwiYm9va3MiOltdfSx7Im5hbWUiOiJtZW5zb2xhIGhwMTIiLCJfaWQiOiI2MWQzNjE0MjRjY2ViZjk0NTczZDgxNGYiLCJib29rcyI6W119XSwiX2lkIjoiNjFkMTg1OTdlMjNkODA5YjcwNzYxOTgzIn0seyJuYW1lIjoibWF0dGlubzIiLCJjcmVhdGlvbkRhdGUiOiIwMi8wMS8yMDIyIiwic2hhcmVhYmxlIjp0cnVlLCJzaGVsdmVzIjpbXSwiX2lkIjoiNjFkMWJhNTQ3ZTA5ZmJiYzhkYzM0MWI1In0seyJuYW1lIjoic3RhbnphIGRhIGxldHRvIiwiY3JlYXRpb25EYXRlIjoiMDQvMDEvMjAyMiIsInNoYXJlYWJsZSI6dHJ1ZSwic2hlbHZlcyI6W3sibmFtZSI6Im1lbnNvbGEgMSIsIl9pZCI6IjYxZDQzNTcwM2NjZDUxNGJiM2U5NTRjNCIsImJvb2tzIjpbeyJpc2JuIjoiODg5MzgxODk3MyIsInRpdGxlIjoiSWwgbGlicm8gZGVpIHNldHRlIHNpZ2lsbGkiLCJhdXRob3JzIjoiQmFyYmFyYSBCZWxsb21vIiwiaXNSZWFkIjp0cnVlLCJzbWFsbFRodW1ibmFpbCI6Imh0dHA6Ly9ib29rcy5nb29nbGUuY29tL2Jvb2tzL2NvbnRlbnQ_aWQ9bzgtV3pRRUFDQUFKJnByaW50c2VjPWZyb250Y292ZXImaW1nPTEmem9vbT01JnNvdXJjZT1nYnNfYXBpIiwiX2lkIjoiNjFkNDM1N2UzY2NkNTE0YmIzZTk1NGYyIn1dfV0sIl9pZCI6IjYxZDQzNGY0M2NjZDUxNGJiM2U5NTQzNCJ9XSwiX192Ijo3Mn0sImlhdCI6MTY0MTM3NTIwNCwiZXhwIjoxNjQxMzc3MDA0fQ.mGomHvXdUp5eQ7ipVhFfSg4HJuu4YKtp-rM2DMFjmpE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\" : \"61d2cf451f65e4f9ec791313\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/book/61d185671aa9f063cb2ecdca/61d2cf121f65e4f9ec791307",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"book",
+						"61d185671aa9f063cb2ecdca",
+						"61d2cf121f65e4f9ec791307"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get shareable Library",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/library/shared/61d5b98aed57c939283b4f2b",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"library",
+						"shared",
+						"61d5b98aed57c939283b4f2b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
